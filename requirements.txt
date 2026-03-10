@@ -1,4 +1,5 @@
 flask
 gunicorn
 google-cloud-storage
+google-generativeai
 # 그 외 코드에서 import해서 사용하는 라이브러리들

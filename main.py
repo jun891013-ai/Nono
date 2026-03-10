@@ -25,3 +25,13 @@ if prompt := st.chat_input():
     response = model.generate_content(prompt)
     st.session_state.messages.append({"role": "assistant", "content": response.text})
     st.chat_message("assistant").write(response.text)
+
+if __name__ == "__main__":
+    import os
+    # 반드시 0.0.0.0 이어야 합니다! 127.0.0.1은 안 돼요.
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080)))
+
+import os
+from flask import Flask # 또는 사용하시는 프레임워크
+
+app = Flask(__name__)
